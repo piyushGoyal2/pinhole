@@ -1,0 +1,8 @@
+{
+  "twilio.account.sid" : "ACa0c3e2bf89a92d349afdcc99e32698b6",
+  "twilio.auth.token" : "b0465fa0d167cfa4cfcf508e86d1a028",
+  "twilio.sender.phone.number" : "+16084926582",
+  "email.from" : "test@pinhole.com",
+  "email.subject" : "Email from pinhole",
+  "sendgrid.api.key" : "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"
+}

@@ -1,0 +1,49 @@
+# "docker-compose -p pinhole up" --build to build and start containers in pinhole project space
+# "docker rm  -f $(docker ps -a -q)"  to kill all containers
+version: "3"
+services:   
+  userdb:
+    image: mysql
+    container_name: userdb
+    volumes:
+      - userdb-data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=hN0ob1FFBxFla08V
+      - MYSQL_DATABASE=userdb
+      - MYSQL_USER= pinhole
+      - MYSQL_PASSWORD pinhole
+    networks:
+      - pinhole-nw
+    expose:
+      - "3306"
+  user-db-service:
+    build: ../user-db-service/.
+    container_name: user-db-service
+    depends_on:
+      - userdb
+    networks:
+      - pinhole-nw  
+    expose:
+      - "9090"     
+  notification-service:
+    build: ../notification-service/.
+    container_name: notification-service
+    depends_on:
+      - user-db-service
+    networks:
+      - pinhole-nw
+
+  registration-service:
+    build: ../registration-service/.
+    container_name: registration-service
+    depends_on:
+      - user-db-service
+    networks:
+      - pinhole-nw
+    expose:
+      - "9091"
+volumes:
+  userdb-data:
+
+networks:
+  pinhole-nw:      

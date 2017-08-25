@@ -1,0 +1,7 @@
+{
+  "mqtt.serverURI": "tcp://127.0.0.1:1883",
+  "mqtt.album.topic": "album/#",
+  "kafka.serverURI" : "localhost:9092",
+  "kafka.album.topic": "album_data1",
+  "mqtt.album.qos" : 2
+}

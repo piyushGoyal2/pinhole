@@ -1,0 +1,5 @@
+{
+  "cassandra.hostname" : "127.0.0.1",
+  "cassandra.db.keyspace": "pinhole",
+  "webhooks.port": 8080
+}

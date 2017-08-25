@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>tech.pinhole.parent</groupId>
+        <artifactId>service-parent</artifactId>
+        <version>1.0</version>
+        <relativePath>../service-parent/pom.xml</relativePath>
+    </parent>
+
+    <groupId>tech.pinhole.service</groupId>
+    <artifactId>kafka-cassandra-connector-service</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <main.verticle>tech.pinhole.service.verticle.KafkaCassandraConnectorVerticle</main.verticle>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>0.10.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>tech.pinhole.common</groupId>
+            <artifactId>service-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-kafka-client</artifactId>
+            <version>${vertx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.datastax.cassandra</groupId>
+            <artifactId>cassandra-driver-core</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+    </dependencies>
+</project>

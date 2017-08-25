@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="trace">
+<Properties>
+    <Property name="logfile">${sys:user.home}/log${date:yyyyMMdd}.log</Property>
+</Properties>
+<Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+        <PatternLayout>
+            <pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</pattern>
+        </PatternLayout>
+    </Console>
+    <File name="FILE" fileName="error.log">
+        <PatternLayout>
+            <pattern>%d %p [%t] %c{1.} %m%n</pattern>
+        </PatternLayout>
+    </File>
+</Appenders>
+<Loggers>
+    <Root level="error">
+        <AppenderRef ref="Console" />
+        <AppenderRef ref="FILE" />
+    </Root>
+</Loggers>
+</Configuration>

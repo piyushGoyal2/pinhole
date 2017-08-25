@@ -1,0 +1,5 @@
+{
+  "user.service.http.address": "127.0.0.1",
+  "user.service.http.port": 9091,
+  "api.name": "registration"
+}

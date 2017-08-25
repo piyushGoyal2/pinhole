@@ -1,0 +1,12 @@
+{
+  "user.account.service.rest.host": "127.0.0.1",
+  "user.account.service.rest.port": 9090,
+  "api.name": "user",
+  "url": "jdbc:mysql://localhost/pinhole_user_db?characterEncoding=UTF-8&useSSL=false",
+  "driver_class": "com.mysql.cj.jdbc.Driver",
+  "user": "root",
+  "password": "",
+  "max_pool_size": 30,
+  "account.otp.ttl": 180000,
+  "account.email.token.ttl": 180000
+}

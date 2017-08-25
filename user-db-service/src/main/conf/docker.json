@@ -1,0 +1,12 @@
+{
+  "user.account.service.rest.host": "user-db-service",
+  "user.account.service.rest.port": 9090,
+  "api.name": "account",
+  "url": "jdbc:mysql://userdb/userdb?characterEncoding=UTF-8&useSSL=false",
+  "driver_class": "com.mysql.cj.jdbc.Driver",
+  "user": "pinhole",
+  "password": "pinhole",
+  "max_pool_size": 30,
+  "account.otp.ttl": 180000,
+  "account.email.token.ttl": 180000
+}

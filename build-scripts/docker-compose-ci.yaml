@@ -1,0 +1,33 @@
+# docker-compose up to build and start CI containers in pinhole project space
+# docker rm  -f $(docker ps -a -q)  to kill all containers
+version: "3"
+services:   
+  nexus:
+    image: sonatype/nexus3
+    container_name: nexus3
+    volumes:
+      - nexus-data:/nexus-data
+    networks:
+       pinhole-nw:
+         aliases:
+            - nexus.pinhole.tech
+    expose:
+      - "8081"
+
+  jenkins:
+    image: jenkins
+    container_name: jenkins
+    volumes:
+        - jenkins-data:/var/jenkins_home
+    networks:
+        pinhole-nw:
+          aliases:
+            - ci.pinhole.tech
+    expose:
+      - "8080"      
+volumes:
+  nexus-data:
+  jenkins-data:  
+
+networks:
+  pinhole-nw:      

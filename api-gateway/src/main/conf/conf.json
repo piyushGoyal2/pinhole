@@ -1,0 +1,5 @@
+{
+  "api.gateway.http.address": "localhost",
+  "api.gateway.http.port": 8787,
+  "api.name": "registration"
+}
