@@ -11,8 +11,10 @@ docker run -p 1883:1883 -e "DOCKER_VERNEMQ_ALLOW_ANONYMOUS=on" --name vernemq1 -
 docker exec -it vernemq1 /bin/bash
 vmq-admin plugin enable -n vmq_webhooks
 vmq-admin webhooks status
-Check your host machine IP which can communicate from vernemq
+```
+Check your host machine IP which can communicate from vernemq and add a DNS entry for it in the vernemq container.
 
+```
 vmq-admin plugin show
 vmq-admin plugin disable -n vmq_passwd
 vmq-admin plugin disable -n vmq_acl  
@@ -21,5 +23,4 @@ vmq-admin webhooks register hook=on_unsubscribe endpoint="http://microservice.pi
 vmq-admin webhooks register hook=auth_on_subscribe endpoint="http://microservice.pinhole.tech:8080/auth/subscribe"
 vmq-admin webhooks register hook=auth_on_publish endpoint="http://microservice.pinhole.tech:8080/auth/publish"
 vmq-admin webhooks register hook=auth_on_register endpoint="http://microservice.pinhole.tech:8080/auth/register"
-
 ```

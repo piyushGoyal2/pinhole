@@ -1,5 +1,5 @@
 {
-  "registration.http.address": "registration-service",
-  "registration.http.port": 9091,
-  "api.name": "registration"
+  "api.gateway.http.address": "localhost",
+  "api.gateway.http.port": 8787,
+  "api.name": "gateway"
 }
