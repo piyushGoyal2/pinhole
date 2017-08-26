@@ -1,9 +1,9 @@
-# README #
+# Customer Registration Service #
 
 This repository hols the registration service verticle and its supporting classes.
 ### What is this repository for? ###
 
-* Registraiton Service provides user registration specific finctionality
+* Registration Service provides user registration specific functionality
 * 1.0-SNAPSHOT
 
 ### Pre-requisite 
@@ -12,7 +12,7 @@ Make sure you have build the service-parent and service-common project first
 ### How to Run 
 
 * mvn clean package to package the fat jar
-* mvn exec:java to execute the jar file 
+* java -jar 
 
 ### Hot Deployment - 
 Thanks to https://github.com/burrsutter/vertx-achievement-service/blob/master/redeploy.sh

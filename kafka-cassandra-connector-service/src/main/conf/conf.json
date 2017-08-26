@@ -1,5 +1,5 @@
 {
   "kafka.serverURI" : "localhost:9092",
-  "kafka.album.topic" : "album_data1",
+  "kafka.album.topic" : "album_data",
   "kafka.group.id" : "20"
 }
